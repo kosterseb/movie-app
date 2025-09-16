@@ -1,5 +1,4 @@
-// TMDB API Configuration
-const API_KEY = '4f5f43495afcc67e9553f6c684a82f84'; // Demo key - replace with your own
+const API_KEY = '4f5f43495afcc67e9553f6c684a82f84';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const BACKDROP_BASE_URL = 'https://image.tmdb.org/t/p/w1280';
@@ -25,7 +24,7 @@ const mainTitle = document.getElementById('mainTitle');
 function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    themeToggle.textContent = savedTheme === 'dark' ? 'Light' : 'Dark';
 }
 
 themeToggle.addEventListener('click', () => {
@@ -33,7 +32,7 @@ themeToggle.addEventListener('click', () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    themeToggle.textContent = newTheme === 'dark' ? 'Light' : 'Dark';
 });
 
 // API Functions
